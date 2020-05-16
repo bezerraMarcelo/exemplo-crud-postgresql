@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "biblioteca", "biblioteca\biblioteca.csproj", "{370287C1-8427-4501-AA01-5992733647DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestarConexao", "TestarConexao\TestarConexao.csproj", "{BEB8658F-5E0A-4157-9A45-7C04B78183B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{370287C1-8427-4501-AA01-5992733647DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{370287C1-8427-4501-AA01-5992733647DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{370287C1-8427-4501-AA01-5992733647DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{370287C1-8427-4501-AA01-5992733647DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEB8658F-5E0A-4157-9A45-7C04B78183B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB8658F-5E0A-4157-9A45-7C04B78183B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB8658F-5E0A-4157-9A45-7C04B78183B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB8658F-5E0A-4157-9A45-7C04B78183B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C37AAAAD-651F-4C39-B070-726CF11E22E5}
+	EndGlobalSection
+EndGlobal
