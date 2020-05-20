@@ -1,4 +1,6 @@
 ﻿using System;
+using biblioteca;
+using Npgsql;
 
 namespace TestarConexao
 {
@@ -6,7 +8,10 @@ namespace TestarConexao
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            NpgsqlConnection conexao = new FabricaConexoes().BuscarConexao();
+            conexao.Open();
+            Console.WriteLine("Conexão aberta!");
+            conexao.Close();
         }
     }
 }
