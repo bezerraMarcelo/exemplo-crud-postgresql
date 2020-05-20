@@ -12,7 +12,7 @@ namespace TestarAdicionar
 
             contato.Nome = "Rafael";
             contato.Email = "rafael@teste.com.br";
-            contato.DataNascimento = Convert.ToDateTime("2017-05-30");
+            contato.DataNascimento = Convert.ToDateTime("2017-01-01");
 
             ContatoDao dao = new ContatoDao();
 
