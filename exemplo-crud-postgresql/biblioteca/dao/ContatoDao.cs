@@ -1,8 +1,10 @@
 ﻿using biblioteca.modelo;
+using biblioteca.dao;
 using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
 
 namespace biblioteca.dao
 {
@@ -58,5 +60,43 @@ namespace biblioteca.dao
             }
         }
 
+        public List<Contato> Ler()
+        {
+            List<Contato> lista = new List<Contato>();
+            string comando = "select * from contatos";
+
+            using (var cmd = new NpgsqlCommand(comando, conexao))
+            {
+                conexao.Open();
+                try
+                {
+                    var leitura = cmd.ExecuteReader();
+                    while (leitura.Read())
+                    {
+                        Contato contato = new Contato();
+                        CultureInfo CurrentCulture = new CultureInfo("pt-BR");
+                        
+                        contato.Id = Int32.Parse(leitura["id"].ToString());
+                        contato.Nome = leitura["nome"].ToString();
+                        contato.Email = leitura["email"].ToString();
+                        
+                        if (leitura["data_nascimento"].ToString() != "")
+                        {
+                            contato.DataNascimento = Convert.ToDateTime(leitura["data_nascimento"].ToString(), CurrentCulture);
+                        }
+                                                
+                        lista.Add(contato);
+                    }
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+            return lista;
+        }
+
     }
+
+    
 }

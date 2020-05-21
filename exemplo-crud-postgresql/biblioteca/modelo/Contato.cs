@@ -11,5 +11,6 @@ namespace biblioteca.modelo
         public string Email { get; set; }
         public string Endereco { get; set; }
         public DateTime DataNascimento { get; set; }
+
     }
 }
